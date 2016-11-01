@@ -1,0 +1,22 @@
+.matrix {
+    float: left;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    margin: 30px;
+}
+
+.matrix div {
+    float: left;
+    /*width: 19px;*/
+    /*height: auto;*/
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999;
+}
+
+.snake {
+    background: linear-gradient(#663399, #227cb2);
+}
+
+.food {
+    background-color: green;
+}
