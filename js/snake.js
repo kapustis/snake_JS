@@ -40,6 +40,8 @@ var Snake = function (matrix, speed) {
     this.move = function () {
         var lastPosition = self.position[self.position.length - 1];
 
+        self.matrix.ports_Wall();
+
         var head = {
             x: lastPosition.x + self.direction.x,
             y: lastPosition.y + self.direction.y
@@ -47,8 +49,9 @@ var Snake = function (matrix, speed) {
 
         if (self.matrix.checkCollision(head)) {
             clearInterval(self.interval);
-            self.matrix.ports_Wall();
+            self.matrix.gameOver();
         } else {
+
             if (self.matrix.getCell(head).hasClass("food")) {
                 self.eat();
             } else {
@@ -69,12 +72,10 @@ var Snake = function (matrix, speed) {
     /*метод кушать*/
 
     this.setDirection = function () {
-
         self.direction = {
             x: 0,
             y: 0
         };
-
 
         switch (event.keyCode) {
             case 39: // вправо

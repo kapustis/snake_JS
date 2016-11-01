@@ -25,7 +25,7 @@ Matrix = function (element, cellSise, rows, cols) {
 
         this.create();
 
-        this.snake = new Snake(this);
+        this.snake = new Snake(this,200);
         this.setFood();
     };
 
@@ -69,7 +69,7 @@ Matrix = function (element, cellSise, rows, cols) {
     };
 
 
-    this.checkCollision = function(position) {
+    this.checkCollision = function (position) {
         var cell = this.getCell(position);
 
         return !cell.length || cell.hasClass('snake');
@@ -90,26 +90,30 @@ Matrix = function (element, cellSise, rows, cols) {
 
 
     /*завершение игры*/
-    /*this.gameOver = function () {
-        console.log("Осторожно на поворотах");
-    };*/
+    this.gameOver = function () {
+     console.log("Осторожно на поворотах");
+     };
     /*завершение игры*/
 
     /*переход через стены*/
     this.ports_Wall = function () {
-        if( this.snake.position.y < 1   ){
-            this.snake.position.y = 20;
+        if (this.snake.position.y > this.rows) {
+            console.log("1");
+            return this.snake.position.y = 1;
         }
-        if(this.position.y > 20){
-            this.position.y = 1;
+        if (this.snake.position.y < 1) {
+            console.log("2");
+           return this.snake.position.y = this.rows;
         }
-        if (this.position.x > 20){
-            this.position.x = 1;
+        if (this.snake.position.x > this.cols) {
+            console.log("3");
+            return this.snake.position.x = 1;
         }
-        if( this.snake.position.x < 1   ){
-            this.snake.position.x = 20;
+        if (this.snake.position.x < 1) {
+            console.log("4");
+            return this.snake.position.x = this.cols;
         }
-     };
+    };
     /*переход через стены*/
     this.constructor();
 };
