@@ -8,10 +8,28 @@
 
 </head>
 <body>
+<div class="settings">
+    <div class="setting close">
+        <a href="#">Скрыть настройки</a>
+    </div>
+    <div class="form-wrapper">
+        <form>
+            <p>Параметры игрового поля:</p>
+            <label for="fieldX">Ширина:</label>
+            <input type="text" value="20" name="sizeX" id="fieldX">
+            <label for="fieldY">Высота:</label>
+            <input type="text" value="20" name="sizeY" id="fieldY"><br>
+            <p>Параметры змейки:</p>
+            <label for="snakeSpeed">Скорость змейки:</label><br>
+            <input type="range" min="100" max="500" step="100" value="100" name="speed" id="snakeSpeed"><br>
+            <input type="button" value="Применить изменения">
+            <input type="reset" value="Очитстиь форму">
+        </form>
+    </div>
+</div>
 <div class="setting open">
     <a href="#">Настройки</a>
 </div>
-
 <div id="matrix" class="matrix"></div>
 
 <div class="gameOver">l
@@ -22,6 +40,8 @@
 
 <script src="lib/jquery-3.1.0.js"></script>
 <script src="js/config.js"></script>
+<script src="js/setting.js"></script>
+
 <script src="js/matrix.js"></script>
 <script src="js/snake.js"></script>
 <script src="js/work.js"></script>
