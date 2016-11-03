@@ -6,8 +6,9 @@
 var Matrix;
 Matrix = function (element, cellSise, rows, cols) {
 
+
     this.element = element;
-    this.cellSise = cellSise || 20;
+
     this.rows = rows || 20;
     this.cols = cols || 20;
 
@@ -25,8 +26,8 @@ Matrix = function (element, cellSise, rows, cols) {
 
         this.create();
 
-        this.snake = new Snake(this,200);
-        this.setFood();
+        this.snake = new Snake(this, 200);
+
     };
 
     this.create = function () {
@@ -37,12 +38,8 @@ Matrix = function (element, cellSise, rows, cols) {
         for (var y = 1; y <= this.rows; y++) {
             for (var x = 1; x <= this.cols; x++) {
                 this.element.append(
-                    $('<div>').addClass('cell-' + x + '-' + y)
-                )
-                    .children().css({
-                    width: this.cellSise - 1,
-                    height: this.cellSise - 1
-                });
+                    $('<div>').addClass('cell-' + x + '-' + y) )
+
             }
         }
 
@@ -53,12 +50,6 @@ Matrix = function (element, cellSise, rows, cols) {
         return this.element.find('.cell-' + position.x + '-' + position.y);
     };
 
-    this.getRandomCell = function () {
-        return ({
-            x: getRandom(1, this.cols),
-            y: getRandom(1, this.rows)
-        });
-    };
 
     this.setCell = function (position, cls) {
         this.getCell(position).addClass(cls);
@@ -75,45 +66,13 @@ Matrix = function (element, cellSise, rows, cols) {
         return !cell.length || cell.hasClass('snake');
     };
 
-    this.setFood = function () {
-        var coordinates = this.getRandomCell();
-
-        while ((coordinates.x == this.snake.position.y && coordinates.x == this.snake.position.y )
-        || (Math.abs(coordinates.x - this.snake.position.x) < 5
-        && Math.abs(coordinates.y - this.snake.position.y) < 5)) {
-            coordinates = this.getRandomCell();
-
-        }
-
-        this.getCell(coordinates).addClass("food");
-    };
-
 
     /*завершение игры*/
     this.gameOver = function () {
-     console.log("Осторожно на поворотах");
-     };
+        console.log("Осторожно на поворотах");
+    };
     /*завершение игры*/
 
-    /*переход через стены*/
-    this.ports_Wall = function () {
-        if (this.snake.position.y > this.rows) {
-            console.log("1");
-            return this.snake.position.y = 1;
-        }
-        if (this.snake.position.y < 1) {
-            console.log("2");
-           return this.snake.position.y = this.rows;
-        }
-        if (this.snake.position.x > this.cols) {
-            console.log("3");
-            return this.snake.position.x = 1;
-        }
-        if (this.snake.position.x < 1) {
-            console.log("4");
-            return this.snake.position.x = this.cols;
-        }
-    };
-    /*переход через стены*/
+
     this.constructor();
 };

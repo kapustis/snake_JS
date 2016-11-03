@@ -4,8 +4,8 @@ body {
     font-family: RobotoRegular, sans-serif;
     font-weight: normal;
     font-size: 16px;
-    color: #ffffff;
-    background: #000000;
+    color: #000000;
+   /* background: #000000;*/
 }
 
 /* Настройки */
@@ -41,6 +41,68 @@ body {
 }
 /* Настройки */
 
+/* Элементы формы */
+
+.form-wrapper p {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+
+.form-wrapper label {
+    padding: 0 10px 0 0;
+    line-height: 25px;
+}
+
+.form-wrapper input[type = text] {
+    margin: 0 0 10px 0;
+    padding: 0 0 0 10px;
+    width: 40px;
+    height: 25px;
+    border: 1px solid #282828;
+    background: #151515;
+    color: #EEEEEE;
+    transition: 0.2s;
+}
+
+.form-wrapper input[type = text]:focus {
+    outline: 1px solid #EBBA37;
+}
+
+.form-wrapper input[name = sizeX] {
+    margin-right: 50px;
+}
+
+.form-wrapper input[type = checkbox] {
+    margin: 0 0 40px 0;
+}
+
+.form-wrapper input[type = range] {
+    width: 100%;
+}
+
+.form-wrapper input[type = button],
+.form-wrapper input[type = reset] {
+    position: absolute;
+    bottom: 50px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-wrapper input[type = button] {
+    left: 90px;
+    background: #569A37;
+}
+
+.form-wrapper input[type = reset] {
+    right: 90px;
+    background: #EB2F00;
+}
+
+/* Элементы формы */
+
 .matrix {
     float: left;
     border-top: 1px solid #999;
@@ -50,16 +112,24 @@ body {
 
 .matrix div {
     float: left;
-    /*width: 19px;*/
-    /*height: auto;*/
+    width: 19px;
+    height: auto;
     border-bottom: 1px solid #999;
     border-right: 1px solid #999;
 }
 
+/*
+.cell {
+    float: left;
+    width: 19px;
+    height: 19px;
+    border-bottom: 1px solid #282828;
+    border-right: 1px solid #282828;
+}*/
 .snake {
     background: linear-gradient(#663399, #227cb2);
 }
 
 .food {
-    background-color: green;
+    background: #EB2F00;
 }
