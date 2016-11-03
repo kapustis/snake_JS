@@ -1,3 +1,24 @@
+html,
+body {
+    margin: 0;
+    font-family: RobotoCondensed, serif;
+    font-size: 16px;
+    color: #EEEEEE;
+    background: #1E1E1E;
+}
+
+.setting a {
+    padding: 0 0 0 20px;
+    background: url(../img/setting.png) no-repeat center left;
+    background-size: 15px 15px;
+    color: #C4C4C4;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+
+
 .matrix {
     float: left;
     border-top: 1px solid #999;
