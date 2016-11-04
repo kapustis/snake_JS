@@ -17,17 +17,18 @@ function start() {
 
     var snake = new Snake(tailX, tailY, direction);
     snake.create();
+
+    /* Создание еды:*/
+    var food = new Food();
+    food.create();
+    /* Создание еды:*/
+
+    /*Движение змейки*/
+    clearInterval(snakeMove);
+    snakeMove = setInterval(snake.move, speed);
+    /*Движение змейки*/
 }
     $(document).ready(function () {
         start();
 });
 
-
-/*
-var getRandom = function(from, to) {
-    return Math.floor((Math.random() * to) + from);
-};
-*/
-//var matrix =  new Matrix($('#matrix'),20,20,20);
-
-//var snake = new Snake(matrix,300);

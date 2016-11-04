@@ -4,8 +4,8 @@ body {
     font-family: RobotoRegular, sans-serif;
     font-weight: normal;
     font-size: 16px;
-    color: #000000;
-   /* background: #000000;*/
+    color: #ffffff;
+     background: #000000;
 }
 
 /* Настройки */
@@ -39,6 +39,7 @@ body {
 .setting a:hover {
     color: #fff;
 }
+
 /* Настройки */
 
 /* Элементы формы */
@@ -103,6 +104,34 @@ body {
 
 /* Элементы формы */
 
+/* Конец игры */
+
+.gameOver {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background: #151515;
+    display: none;
+}
+
+.gameOver p {
+    margin: 0 0 20px 0;
+}
+
+.gameOver a {
+    color: #569A37; /*#C4C4C4;*/
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.gameOver a:hover {
+    color: #fff;
+}
+
+
 .matrix {
     position: absolute;
     top: 50%;
@@ -122,16 +151,6 @@ body {
     border-right: 1px solid #282828;
 }
 
-
-
-/*
-.cell {
-    float: left;
-    width: 19px;
-    height: 19px;
-    border-bottom: 1px solid #282828;
-    border-right: 1px solid #282828;
-}*/
 .snake {
     background: linear-gradient(#663399, #227cb2);
 }

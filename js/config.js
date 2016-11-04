@@ -10,3 +10,11 @@ var conteinerId = "matrix"; // id контейнера
 /* Параметры змейки */
 var snakeBody = []; // Тело змейки
 /* Параметры змейки */
+var tailX =  1; // По оси X
+var tailY =  1; // По оси Y
+var direction = 'right'; // Направление
+var speed = 500; // Скорость
+var snakeMove; // Интервал
+
+/* Параметры игры */
+var count = 0; // Счет
