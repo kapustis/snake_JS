@@ -13,4 +13,7 @@ function Snake(tailX, tailY, direction) {
         snakeBody[0].create();
     };
     /*Создание змейки*/
+
+
+
 }

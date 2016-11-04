@@ -10,6 +10,13 @@ function start() {
     field.create();
     /* Создание игрового поля: */
 
+    // Создание змейки:
+    for (var i = 1; i < snakeBody.length; i++) {
+        delete snakeBody[i];
+    }
+
+    var snake = new Snake(tailX, tailY, direction);
+    snake.create();
 }
     $(document).ready(function () {
         start();

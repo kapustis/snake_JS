@@ -4,7 +4,7 @@
 /* Параметры игрового поля */
 var sizeX = 20; // Ширина
 var sizeY = 20; // Высота
-var conteinerId = 'conteiner'; // id контейнера
+var conteinerId = "matrix"; // id контейнера
 /* Параметры игрового поля */
 
 /* Параметры змейки */
