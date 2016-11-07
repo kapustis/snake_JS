@@ -12,7 +12,7 @@ function Cell(locationX, locationY, cellType) {
         var cellNumber = (this.locationY - 1) * sizeX + this.locationX;
         $('.cell:nth-child(' + cellNumber + ')').removeClass().addClass('cell ' + this.cellType);
     };
-    /*Cоздание клетки*/
+    /*Создание клетки*/
 
     /*Очистка клетки*/
     this.delete = function () {

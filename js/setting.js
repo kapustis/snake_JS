@@ -33,3 +33,30 @@ $('#fieldY').change(function () {
     }
 });
 /* Валидация текстовых полей*/
+
+// Новая игра и применение
+$('.gameOver a, input[type = button]').click(function () {
+    applyChanges();
+    $('.gameOver').slideUp(500);
+});
+
+
+// Применение настроек:
+function applyChanges() {
+    // Размеры игрового поля:
+    sizeX = parseInt($('#fieldX').val());
+    sizeY = parseInt($('#fieldY').val());
+
+    // Очистка тела змейки:
+    snakeBody = [];
+
+    /* Начальные координаты хвоста и направление:*/
+    tailX = 1;
+    tailY = 1;
+    direction = 'right';
+
+    // Скорость змейки:
+    speed = 600 - $('#snakeSpeed').val();
+
+    start();
+}
